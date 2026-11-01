@@ -1,0 +1,24 @@
+{
+  "name": "genpark-personal-agent-ambient-noise-auditory-focus-masker-skill",
+  "version": "1.0.0",
+  "description": "Audits acoustical distraction risk from intelligible speech, quantifies working memory loss, and synthesizes colored noise (pink/brown) sound masking profiles.",
+  "tools": [
+    {
+      "name": "evaluate_acoustic_distraction_risk",
+      "description": "Audits room sound pressure, speech intelligibility, and cognitive distraction penalty.",
+      "parameters": {
+        "ambient_dba": "float",
+        "speech_presence_pct": "float (optional, default 25.0)",
+        "background_variability_db": "float (optional, default 8.0)"
+      }
+    },
+    {
+      "name": "synthesize_colored_noise_masking_profile",
+      "description": "Synthesizes optimal Pink/Brown noise masking profile and safe decibel targets.",
+      "parameters": {
+        "ambient_dba": "float",
+        "target_work_type": "string (optional, default 'deep_coding')"
+      }
+    }
+  ]
+}
